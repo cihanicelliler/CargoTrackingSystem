@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "cargo-tracking-system",
+  "private_key_id": "ad38522a9af46defac8221c143f9019b75f0d0e9",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQC+Ds1H9NGWdnnF\nR+MGE7i1C3HwcuJcRkYs+gEJQZVKYo1LPj+Jwd+aUlWQhQlkZQsxYMwzT+SRjzJg\nh3NMzEpSBjs7v8le0hg1pmYsjqfuSCm2qmwyS15mhNPp8L2XE8zx95EPtv+N83hg\nSEJNwJujbkPV89wW+XwQ+/M0mRGJxGDFz8ffV+Ei+YFPd47vowRHci7QL14TG6rr\nL4pUDlvMfyjqwp3XtIoxpJL9ueWwM+6qLcem9aD7zeILW+M1+xzsSpVSYT99YNBG\nLG5e79cBkFUifenzX+ALLGHte8Av2yk7gRxkULdArB/HZ4R/x/X+vrfxd3jTBaaN\nS5QdDcADAgMBAAECggEAPvEX+uSRJItH+JW+EZ0mZo7LxR3G6Vg8lViWT0Jw9pl8\nwZZz5GNYcfsiayIj4iO0eT3dYoDq6WnK/TzeamidlFyL8VWqksRxUBMzcz4rTzaG\n2f/GpUFgmgMTSz53Czl7fgbG+7VXHOOs0fYcPzOyV4WE4a5JDTLCa72E5b5rmHvm\nk5nRFWhLKqpp9MSTPuF4AxNeRdYQTkscFphtRWF6SCD/rVnOaTMnzRJuukjbP8cG\nb1LTJ80cMNl15EqGl5HRpyvCu5nFv5orZD0KgtH9C8aBNjL+dSx82L6CjbyByG/K\nLGriMLhUyqhSBH2xxxpt1x4eYTvgpyp0F/qEcgmsQQKBgQDfev8vZUBRRN8aphra\nxlDJsDJCtsZ2TwaKw8Xabf6JukhiY/GIMsjB0r5oQgbjTIeGv4LWMf8+dmGQvM1I\nJB4+N6hPr8p2zeex/UcwJS2s8JkfF90y+kSbEood8G1bYf6o6SM01NzOkxt+LO9S\nt/MD9ci4t+72IikNnBU61iE33QKBgQDZtsIyk6XBp6+HyrBOlrlImNBfTJisdMeI\nfx1l8ieaeU+wXxLPN0FzQT5ZYtELiOtFZnQvU45CFdKGXS2RtBBIMF74dK05zrUY\npFNgYsCP0DFHQQYxEtUKmECQRqsh2CDJlxiQ5RozkKFfTjrJRFaJ18CeUvvkIR0y\nJ6y4DjxJXwKBgQC5+/WVbxE40TVPSz98JKElSLJ7XPsLiLbsEwN8xh+YZWRKJdzj\nuUfkLkvyHkj3L0B2vrjXI6LFS+Xke4vn5s8Yfl9fee/oMXIKabut8LLzgwQboVOg\nUjF4UNSLGAUakRJLZkK7fA8LB9hQiHrff2EKQak7OS/wvPsnbWcpoPziLQKBgQDB\naCXkoF2kR78btughKKy43WhfAMCwk52emK4ZHqIoDJTKbetbwg6WwOMOrUZgJOY8\n5ONaF7RM6O35B1WwFnJQbwgvWBd7PzKKDZE0EwZVu/HLBuzlM4Gmw9K3WNA2ZLXb\n4CqmraA1Jsr0y55VpivqkIxBGh9DbldtculxKNRNqQKBgQCDrSY7jSCqHgogKUqV\n+p/KkVemK+i03sbPmF2x4SKhzK9iTa2YJGMwvtwU9wth3mBLhK7aZeWufPg6gnpi\nkXZocZ6sUvy6Mn+WWMW7HXSE+agzi2+SvKG/QZp+dbR/G5d/fvlFl81cZKuTi4yi\nGIxHws0v9XKwb78PXr7VylreVw==\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-oclok@cargo-tracking-system.iam.gserviceaccount.com",
+  "client_id": "105031729649974178064",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-oclok%40cargo-tracking-system.iam.gserviceaccount.com"
+}
