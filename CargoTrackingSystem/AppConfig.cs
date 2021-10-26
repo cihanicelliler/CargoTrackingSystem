@@ -8,6 +8,6 @@ namespace CargoTrackingSystem
 {
     class AppConfig
     {
-        public static string Key { get; set; } = @"AIzaSyBjc6KiH6nDh0KO4QRuN_4pNzNiPEmUsr4";
+        public static string Key { get; set; } = @"AIzaSyDyXuOpWKHqH3Ybjdy9jvrT4zRHPP6reug";
     }
 }

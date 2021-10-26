@@ -29,16 +29,17 @@
         private void InitializeComponent()
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.map = new GMap.NET.WindowsForms.GMapControl();
-            this.txtLatitude = new System.Windows.Forms.TextBox();
-            this.txtLongitude = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.btnLoadMap = new System.Windows.Forms.Button();
-            this.btnAddPoint = new System.Windows.Forms.Button();
-            this.btnClearList = new System.Windows.Forms.Button();
-            this.btnGetRoute = new System.Windows.Forms.Button();
             this.lblDistance = new System.Windows.Forms.Label();
+            this.btnGetRoute = new System.Windows.Forms.Button();
+            this.btnClearList = new System.Windows.Forms.Button();
+            this.btnAddPoint = new System.Windows.Forms.Button();
+            this.btnLoadMap = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtLongitude = new System.Windows.Forms.TextBox();
+            this.txtLatitude = new System.Windows.Forms.TextBox();
+            this.map = new GMap.NET.WindowsForms.GMapControl();
+            this.txtAddress = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -53,6 +54,7 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.txtAddress);
             this.splitContainer1.Panel1.Controls.Add(this.lblDistance);
             this.splitContainer1.Panel1.Controls.Add(this.btnGetRoute);
             this.splitContainer1.Panel1.Controls.Add(this.btnClearList);
@@ -69,6 +71,87 @@
             this.splitContainer1.Size = new System.Drawing.Size(1479, 770);
             this.splitContainer1.SplitterDistance = 493;
             this.splitContainer1.TabIndex = 0;
+            // 
+            // lblDistance
+            // 
+            this.lblDistance.AutoSize = true;
+            this.lblDistance.Location = new System.Drawing.Point(37, 538);
+            this.lblDistance.Name = "lblDistance";
+            this.lblDistance.Size = new System.Drawing.Size(123, 20);
+            this.lblDistance.TabIndex = 3;
+            this.lblDistance.Text = "[Distance in KM]";
+            // 
+            // btnGetRoute
+            // 
+            this.btnGetRoute.Location = new System.Drawing.Point(41, 459);
+            this.btnGetRoute.Name = "btnGetRoute";
+            this.btnGetRoute.Size = new System.Drawing.Size(407, 53);
+            this.btnGetRoute.TabIndex = 2;
+            this.btnGetRoute.Text = "Get Route";
+            this.btnGetRoute.UseVisualStyleBackColor = true;
+            this.btnGetRoute.Click += new System.EventHandler(this.btnGetRoute_Click);
+            // 
+            // btnClearList
+            // 
+            this.btnClearList.Location = new System.Drawing.Point(41, 387);
+            this.btnClearList.Name = "btnClearList";
+            this.btnClearList.Size = new System.Drawing.Size(407, 53);
+            this.btnClearList.TabIndex = 2;
+            this.btnClearList.Text = "Clear List";
+            this.btnClearList.UseVisualStyleBackColor = true;
+            this.btnClearList.Click += new System.EventHandler(this.btnClearList_Click);
+            // 
+            // btnAddPoint
+            // 
+            this.btnAddPoint.Location = new System.Drawing.Point(38, 309);
+            this.btnAddPoint.Name = "btnAddPoint";
+            this.btnAddPoint.Size = new System.Drawing.Size(410, 53);
+            this.btnAddPoint.TabIndex = 2;
+            this.btnAddPoint.Text = "Add Point";
+            this.btnAddPoint.UseVisualStyleBackColor = true;
+            this.btnAddPoint.Click += new System.EventHandler(this.btnAddPoint_Click);
+            // 
+            // btnLoadMap
+            // 
+            this.btnLoadMap.Location = new System.Drawing.Point(38, 232);
+            this.btnLoadMap.Name = "btnLoadMap";
+            this.btnLoadMap.Size = new System.Drawing.Size(410, 53);
+            this.btnLoadMap.TabIndex = 2;
+            this.btnLoadMap.Text = "Load Into Map";
+            this.btnLoadMap.UseVisualStyleBackColor = true;
+            this.btnLoadMap.Click += new System.EventHandler(this.btnLoadMap_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(34, 141);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(80, 20);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Longitude";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(34, 50);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(67, 20);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Latitude";
+            // 
+            // txtLongitude
+            // 
+            this.txtLongitude.Location = new System.Drawing.Point(38, 179);
+            this.txtLongitude.Name = "txtLongitude";
+            this.txtLongitude.Size = new System.Drawing.Size(410, 26);
+            this.txtLongitude.TabIndex = 0;
+            // 
+            // txtLatitude
+            // 
+            this.txtLatitude.Location = new System.Drawing.Point(38, 92);
+            this.txtLatitude.Name = "txtLatitude";
+            this.txtLatitude.Size = new System.Drawing.Size(410, 26);
+            this.txtLatitude.TabIndex = 0;
             // 
             // map
             // 
@@ -95,87 +178,15 @@
             this.map.Size = new System.Drawing.Size(979, 758);
             this.map.TabIndex = 0;
             this.map.Zoom = 0D;
+            this.map.MouseClick += new System.Windows.Forms.MouseEventHandler(this.map_MouseClick);
             // 
-            // txtLatitude
+            // txtAddress
             // 
-            this.txtLatitude.Location = new System.Drawing.Point(38, 92);
-            this.txtLatitude.Name = "txtLatitude";
-            this.txtLatitude.Size = new System.Drawing.Size(410, 26);
-            this.txtLatitude.TabIndex = 0;
-            // 
-            // txtLongitude
-            // 
-            this.txtLongitude.Location = new System.Drawing.Point(38, 179);
-            this.txtLongitude.Name = "txtLongitude";
-            this.txtLongitude.Size = new System.Drawing.Size(410, 26);
-            this.txtLongitude.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(34, 50);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 20);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Latitude";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(34, 141);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(80, 20);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Longitude";
-            // 
-            // btnLoadMap
-            // 
-            this.btnLoadMap.Location = new System.Drawing.Point(38, 232);
-            this.btnLoadMap.Name = "btnLoadMap";
-            this.btnLoadMap.Size = new System.Drawing.Size(410, 53);
-            this.btnLoadMap.TabIndex = 2;
-            this.btnLoadMap.Text = "Load Into Map";
-            this.btnLoadMap.UseVisualStyleBackColor = true;
-            this.btnLoadMap.Click += new System.EventHandler(this.btnLoadMap_Click);
-            // 
-            // btnAddPoint
-            // 
-            this.btnAddPoint.Location = new System.Drawing.Point(38, 309);
-            this.btnAddPoint.Name = "btnAddPoint";
-            this.btnAddPoint.Size = new System.Drawing.Size(410, 53);
-            this.btnAddPoint.TabIndex = 2;
-            this.btnAddPoint.Text = "Add Point";
-            this.btnAddPoint.UseVisualStyleBackColor = true;
-            this.btnAddPoint.Click += new System.EventHandler(this.btnAddPoint_Click);
-            // 
-            // btnClearList
-            // 
-            this.btnClearList.Location = new System.Drawing.Point(41, 387);
-            this.btnClearList.Name = "btnClearList";
-            this.btnClearList.Size = new System.Drawing.Size(407, 53);
-            this.btnClearList.TabIndex = 2;
-            this.btnClearList.Text = "Clear List";
-            this.btnClearList.UseVisualStyleBackColor = true;
-            this.btnClearList.Click += new System.EventHandler(this.btnClearList_Click);
-            // 
-            // btnGetRoute
-            // 
-            this.btnGetRoute.Location = new System.Drawing.Point(41, 459);
-            this.btnGetRoute.Name = "btnGetRoute";
-            this.btnGetRoute.Size = new System.Drawing.Size(407, 53);
-            this.btnGetRoute.TabIndex = 2;
-            this.btnGetRoute.Text = "Get Route";
-            this.btnGetRoute.UseVisualStyleBackColor = true;
-            this.btnGetRoute.Click += new System.EventHandler(this.btnGetRoute_Click);
-            // 
-            // lblDistance
-            // 
-            this.lblDistance.AutoSize = true;
-            this.lblDistance.Location = new System.Drawing.Point(37, 538);
-            this.lblDistance.Name = "lblDistance";
-            this.lblDistance.Size = new System.Drawing.Size(123, 20);
-            this.lblDistance.TabIndex = 3;
-            this.lblDistance.Text = "[Distance in KM]";
+            this.txtAddress.Location = new System.Drawing.Point(38, 573);
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(410, 197);
+            this.txtAddress.TabIndex = 4;
+            this.txtAddress.Text = "";
             // 
             // HomePageForUser
             // 
@@ -208,5 +219,6 @@
         private System.Windows.Forms.Button btnAddPoint;
         private System.Windows.Forms.Button btnGetRoute;
         private System.Windows.Forms.Label lblDistance;
+        private System.Windows.Forms.RichTextBox txtAddress;
     }
 }
