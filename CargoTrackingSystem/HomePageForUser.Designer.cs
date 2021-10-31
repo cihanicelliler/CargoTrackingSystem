@@ -29,9 +29,10 @@
         private void InitializeComponent()
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.lblDistance = new System.Windows.Forms.Label();
-            this.btnGetRoute = new System.Windows.Forms.Button();
-            this.btnClearList = new System.Windows.Forms.Button();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.txtAddress = new System.Windows.Forms.RichTextBox();
+            this.btnOpenMap = new System.Windows.Forms.Button();
+            this.btnStart = new System.Windows.Forms.Button();
             this.btnAddPoint = new System.Windows.Forms.Button();
             this.btnLoadMap = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -39,7 +40,7 @@
             this.txtLongitude = new System.Windows.Forms.TextBox();
             this.txtLatitude = new System.Windows.Forms.TextBox();
             this.map = new GMap.NET.WindowsForms.GMapControl();
-            this.txtAddress = new System.Windows.Forms.RichTextBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -54,10 +55,11 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.listBox1);
             this.splitContainer1.Panel1.Controls.Add(this.txtAddress);
-            this.splitContainer1.Panel1.Controls.Add(this.lblDistance);
-            this.splitContainer1.Panel1.Controls.Add(this.btnGetRoute);
-            this.splitContainer1.Panel1.Controls.Add(this.btnClearList);
+            this.splitContainer1.Panel1.Controls.Add(this.button1);
+            this.splitContainer1.Panel1.Controls.Add(this.btnOpenMap);
+            this.splitContainer1.Panel1.Controls.Add(this.btnStart);
             this.splitContainer1.Panel1.Controls.Add(this.btnAddPoint);
             this.splitContainer1.Panel1.Controls.Add(this.btnLoadMap);
             this.splitContainer1.Panel1.Controls.Add(this.label2);
@@ -68,42 +70,50 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.map);
-            this.splitContainer1.Size = new System.Drawing.Size(1479, 770);
-            this.splitContainer1.SplitterDistance = 493;
+            this.splitContainer1.Size = new System.Drawing.Size(1710, 893);
+            this.splitContainer1.SplitterDistance = 570;
             this.splitContainer1.TabIndex = 0;
             // 
-            // lblDistance
+            // listBox1
             // 
-            this.lblDistance.AutoSize = true;
-            this.lblDistance.Location = new System.Drawing.Point(37, 538);
-            this.lblDistance.Name = "lblDistance";
-            this.lblDistance.Size = new System.Drawing.Size(123, 20);
-            this.lblDistance.TabIndex = 3;
-            this.lblDistance.Text = "[Distance in KM]";
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 20;
+            this.listBox1.Location = new System.Drawing.Point(252, 573);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(196, 244);
+            this.listBox1.TabIndex = 5;
             // 
-            // btnGetRoute
+            // txtAddress
             // 
-            this.btnGetRoute.Location = new System.Drawing.Point(41, 459);
-            this.btnGetRoute.Name = "btnGetRoute";
-            this.btnGetRoute.Size = new System.Drawing.Size(407, 53);
-            this.btnGetRoute.TabIndex = 2;
-            this.btnGetRoute.Text = "Get Route";
-            this.btnGetRoute.UseVisualStyleBackColor = true;
-            this.btnGetRoute.Click += new System.EventHandler(this.btnGetRoute_Click);
+            this.txtAddress.Location = new System.Drawing.Point(38, 573);
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(208, 241);
+            this.txtAddress.TabIndex = 4;
+            this.txtAddress.Text = "";
             // 
-            // btnClearList
+            // btnOpenMap
             // 
-            this.btnClearList.Location = new System.Drawing.Point(41, 387);
-            this.btnClearList.Name = "btnClearList";
-            this.btnClearList.Size = new System.Drawing.Size(407, 53);
-            this.btnClearList.TabIndex = 2;
-            this.btnClearList.Text = "Clear List";
-            this.btnClearList.UseVisualStyleBackColor = true;
-            this.btnClearList.Click += new System.EventHandler(this.btnClearList_Click);
+            this.btnOpenMap.Location = new System.Drawing.Point(44, 415);
+            this.btnOpenMap.Name = "btnOpenMap";
+            this.btnOpenMap.Size = new System.Drawing.Size(407, 53);
+            this.btnOpenMap.TabIndex = 2;
+            this.btnOpenMap.Text = "Open Map";
+            this.btnOpenMap.UseVisualStyleBackColor = true;
+            this.btnOpenMap.Click += new System.EventHandler(this.btnOpenMap_Click);
+            // 
+            // btnStart
+            // 
+            this.btnStart.Location = new System.Drawing.Point(44, 343);
+            this.btnStart.Name = "btnStart";
+            this.btnStart.Size = new System.Drawing.Size(407, 53);
+            this.btnStart.TabIndex = 2;
+            this.btnStart.Text = "Start";
+            this.btnStart.UseVisualStyleBackColor = true;
+            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
             // 
             // btnAddPoint
             // 
-            this.btnAddPoint.Location = new System.Drawing.Point(38, 309);
+            this.btnAddPoint.Location = new System.Drawing.Point(41, 265);
             this.btnAddPoint.Name = "btnAddPoint";
             this.btnAddPoint.Size = new System.Drawing.Size(410, 53);
             this.btnAddPoint.TabIndex = 2;
@@ -113,7 +123,7 @@
             // 
             // btnLoadMap
             // 
-            this.btnLoadMap.Location = new System.Drawing.Point(38, 232);
+            this.btnLoadMap.Location = new System.Drawing.Point(41, 188);
             this.btnLoadMap.Name = "btnLoadMap";
             this.btnLoadMap.Size = new System.Drawing.Size(410, 53);
             this.btnLoadMap.TabIndex = 2;
@@ -124,7 +134,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(34, 141);
+            this.label2.Location = new System.Drawing.Point(37, 97);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(80, 20);
             this.label2.TabIndex = 1;
@@ -133,7 +143,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(34, 50);
+            this.label1.Location = new System.Drawing.Point(37, 6);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(67, 20);
             this.label1.TabIndex = 1;
@@ -141,14 +151,14 @@
             // 
             // txtLongitude
             // 
-            this.txtLongitude.Location = new System.Drawing.Point(38, 179);
+            this.txtLongitude.Location = new System.Drawing.Point(41, 135);
             this.txtLongitude.Name = "txtLongitude";
             this.txtLongitude.Size = new System.Drawing.Size(410, 26);
             this.txtLongitude.TabIndex = 0;
             // 
             // txtLatitude
             // 
-            this.txtLatitude.Location = new System.Drawing.Point(38, 92);
+            this.txtLatitude.Location = new System.Drawing.Point(41, 48);
             this.txtLatitude.Name = "txtLatitude";
             this.txtLatitude.Size = new System.Drawing.Size(410, 26);
             this.txtLatitude.TabIndex = 0;
@@ -175,28 +185,30 @@
             this.map.ScaleMode = GMap.NET.WindowsForms.ScaleModes.Integer;
             this.map.SelectedAreaFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(65)))), ((int)(((byte)(105)))), ((int)(((byte)(225)))));
             this.map.ShowTileGridLines = false;
-            this.map.Size = new System.Drawing.Size(979, 758);
+            this.map.Size = new System.Drawing.Size(1130, 869);
             this.map.TabIndex = 0;
             this.map.Zoom = 0D;
             this.map.MouseClick += new System.Windows.Forms.MouseEventHandler(this.map_MouseClick);
             // 
-            // txtAddress
+            // button1
             // 
-            this.txtAddress.Location = new System.Drawing.Point(38, 573);
-            this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(410, 197);
-            this.txtAddress.TabIndex = 4;
-            this.txtAddress.Text = "";
+            this.button1.Location = new System.Drawing.Point(44, 494);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(407, 53);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Delete Point";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.btnDeletePoint_Click);
             // 
             // HomePageForUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1479, 770);
+            this.ClientSize = new System.Drawing.Size(1710, 893);
             this.Controls.Add(this.splitContainer1);
             this.Name = "HomePageForUser";
             this.Text = "HomePageForUser";
-            this.Load += new System.EventHandler(this.HomePageForUser_Load_1);
+            this.Load += new System.EventHandler(this.HomePageForUser_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
@@ -215,10 +227,11 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtLongitude;
         private System.Windows.Forms.TextBox txtLatitude;
-        private System.Windows.Forms.Button btnClearList;
+        private System.Windows.Forms.Button btnStart;
         private System.Windows.Forms.Button btnAddPoint;
-        private System.Windows.Forms.Button btnGetRoute;
-        private System.Windows.Forms.Label lblDistance;
+        private System.Windows.Forms.Button btnOpenMap;
         private System.Windows.Forms.RichTextBox txtAddress;
+        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Button button1;
     }
 }
