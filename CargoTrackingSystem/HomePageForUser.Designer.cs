@@ -41,6 +41,9 @@
             this.txtLongitude = new System.Windows.Forms.TextBox();
             this.txtLatitude = new System.Windows.Forms.TextBox();
             this.map = new GMap.NET.WindowsForms.GMapControl();
+            this.btnUpdateInfo = new System.Windows.Forms.Button();
+            this.txtBoxUpdatePassword = new System.Windows.Forms.TextBox();
+            this.txtBoxUpdateName = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -58,6 +61,7 @@
             this.splitContainer1.Panel1.BackColor = System.Drawing.Color.DarkTurquoise;
             this.splitContainer1.Panel1.Controls.Add(this.listBox1);
             this.splitContainer1.Panel1.Controls.Add(this.txtAddress);
+            this.splitContainer1.Panel1.Controls.Add(this.btnUpdateInfo);
             this.splitContainer1.Panel1.Controls.Add(this.button1);
             this.splitContainer1.Panel1.Controls.Add(this.btnOpenMap);
             this.splitContainer1.Panel1.Controls.Add(this.btnStart);
@@ -65,6 +69,8 @@
             this.splitContainer1.Panel1.Controls.Add(this.btnLoadMap);
             this.splitContainer1.Panel1.Controls.Add(this.label2);
             this.splitContainer1.Panel1.Controls.Add(this.label1);
+            this.splitContainer1.Panel1.Controls.Add(this.txtBoxUpdateName);
+            this.splitContainer1.Panel1.Controls.Add(this.txtBoxUpdatePassword);
             this.splitContainer1.Panel1.Controls.Add(this.txtLongitude);
             this.splitContainer1.Panel1.Controls.Add(this.txtLatitude);
             // 
@@ -79,16 +85,16 @@
             // 
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 20;
-            this.listBox1.Location = new System.Drawing.Point(252, 573);
+            this.listBox1.Location = new System.Drawing.Point(255, 720);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(196, 244);
+            this.listBox1.Size = new System.Drawing.Size(196, 164);
             this.listBox1.TabIndex = 5;
             // 
             // txtAddress
             // 
-            this.txtAddress.Location = new System.Drawing.Point(38, 573);
+            this.txtAddress.Location = new System.Drawing.Point(41, 720);
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(208, 241);
+            this.txtAddress.Size = new System.Drawing.Size(208, 161);
             this.txtAddress.TabIndex = 4;
             this.txtAddress.Text = "";
             // 
@@ -213,6 +219,32 @@
             this.map.Zoom = 0D;
             this.map.MouseClick += new System.Windows.Forms.MouseEventHandler(this.map_MouseClick);
             // 
+            // btnUpdateInfo
+            // 
+            this.btnUpdateInfo.BackColor = System.Drawing.Color.Orange;
+            this.btnUpdateInfo.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnUpdateInfo.Location = new System.Drawing.Point(44, 643);
+            this.btnUpdateInfo.Name = "btnUpdateInfo";
+            this.btnUpdateInfo.Size = new System.Drawing.Size(407, 53);
+            this.btnUpdateInfo.TabIndex = 2;
+            this.btnUpdateInfo.Text = "Update User Info";
+            this.btnUpdateInfo.UseVisualStyleBackColor = false;
+            this.btnUpdateInfo.Click += new System.EventHandler(this.btnUpdateUserInfo_Click);
+            // 
+            // txtBoxUpdatePassword
+            // 
+            this.txtBoxUpdatePassword.Location = new System.Drawing.Point(44, 611);
+            this.txtBoxUpdatePassword.Name = "txtBoxUpdatePassword";
+            this.txtBoxUpdatePassword.Size = new System.Drawing.Size(410, 26);
+            this.txtBoxUpdatePassword.TabIndex = 0;
+            // 
+            // txtBoxUpdateName
+            // 
+            this.txtBoxUpdateName.Location = new System.Drawing.Point(44, 568);
+            this.txtBoxUpdateName.Name = "txtBoxUpdateName";
+            this.txtBoxUpdateName.Size = new System.Drawing.Size(410, 26);
+            this.txtBoxUpdateName.TabIndex = 0;
+            // 
             // HomePageForUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -246,5 +278,8 @@
         private System.Windows.Forms.RichTextBox txtAddress;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnUpdateInfo;
+        private System.Windows.Forms.TextBox txtBoxUpdateName;
+        private System.Windows.Forms.TextBox txtBoxUpdatePassword;
     }
 }

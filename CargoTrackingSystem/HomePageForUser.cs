@@ -454,5 +454,17 @@ namespace CargoTrackingSystem
             deleteForMarkers++;
             MessageBox.Show("Successful!");
         }
+
+        private void btnUpdateUserInfo_Click(object sender, EventArgs e)
+        {
+            UsersInfo user = new UsersInfo()
+            {
+                Username = txtBoxUpdateName.Text,
+                Password = txtBoxUpdatePassword.Text,
+            };
+
+            SetResponse set = client.Set("Users/" + txtBoxUpdateName.Text, user);
+            MessageBox.Show("Successful");
+        }
     }
 }
