@@ -56,6 +56,7 @@
             this.gMap.Size = new System.Drawing.Size(1403, 834);
             this.gMap.TabIndex = 1;
             this.gMap.Zoom = 0D;
+            this.gMap.Load += new System.EventHandler(this.gMap_Load);
             // 
             // MapPage
             // 

@@ -85,5 +85,10 @@ namespace CargoTrackingSystem
 
             }
         }
+
+        private void gMap_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

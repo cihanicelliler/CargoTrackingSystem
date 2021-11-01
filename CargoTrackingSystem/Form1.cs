@@ -60,6 +60,7 @@ namespace CargoTrackingSystem
 
             if (UsersInfo.IsEqual(ResUser, CurUser))
             {
+                this.Hide();
                 HomePageForUser real = new HomePageForUser();
                 real.ShowDialog();
                 UserName.User = txtBoxUserName.Text;

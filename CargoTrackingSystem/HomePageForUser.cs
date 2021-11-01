@@ -25,6 +25,7 @@ namespace CargoTrackingSystem
         private double[,] totalKmArray = new double[100, 100];
         private string[,] globalArray = new string[100, 100];
         int deleteForMarkers = 0;
+        int indexCount = 0;
 
         IFirebaseConfig ifc = new FirebaseConfig()
         {
@@ -97,7 +98,7 @@ namespace CargoTrackingSystem
             public int İndex { get; set; }
         }
 
-        void GetCoordinates()
+        public void GetCoordinates()
         {
             string address = "https://cargo-tracking-system-default-rtdb.firebaseio.com/.json";
             WebRequest request = HttpWebRequest.Create(address);
@@ -134,6 +135,7 @@ namespace CargoTrackingSystem
                     listBox1.Items.Add(GlobalArray.globalPoints[i]);
 
                 }
+                indexCount = GlobalArray.globalPoints.Count();
                 //kısayol algoritması
                 GlobalArray.numberOfElement = GlobalArray.globalPoints.Count - 1;
                 int[] arr = new int[GlobalArray.numberOfElement];
@@ -446,14 +448,11 @@ namespace CargoTrackingSystem
 
         private async void btnDeletePoint_Click(object sender, EventArgs e)
         {
-            int indexCount = GlobalArray.globalPoints.Count();
             indexCount -= 1;
             FirebaseResponse res = await client.DeleteAsync("Coordinates/" + totalArray[GlobalArray.index, deleteForMarkers]);
             SetResponse setİndex = client.Set("İndex", indexCount);
             deleteForMarkers++;
             MessageBox.Show("Successful!");
-          
-
         }
     }
 }

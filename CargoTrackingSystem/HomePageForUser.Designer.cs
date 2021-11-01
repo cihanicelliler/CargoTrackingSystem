@@ -31,6 +31,7 @@
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.txtAddress = new System.Windows.Forms.RichTextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnOpenMap = new System.Windows.Forms.Button();
             this.btnStart = new System.Windows.Forms.Button();
             this.btnAddPoint = new System.Windows.Forms.Button();
@@ -40,7 +41,6 @@
             this.txtLongitude = new System.Windows.Forms.TextBox();
             this.txtLatitude = new System.Windows.Forms.TextBox();
             this.map = new GMap.NET.WindowsForms.GMapControl();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -55,6 +55,7 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.BackColor = System.Drawing.Color.DarkTurquoise;
             this.splitContainer1.Panel1.Controls.Add(this.listBox1);
             this.splitContainer1.Panel1.Controls.Add(this.txtAddress);
             this.splitContainer1.Panel1.Controls.Add(this.button1);
@@ -91,49 +92,70 @@
             this.txtAddress.TabIndex = 4;
             this.txtAddress.Text = "";
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.SteelBlue;
+            this.button1.ForeColor = System.Drawing.SystemColors.Control;
+            this.button1.Location = new System.Drawing.Point(44, 494);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(407, 53);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Delivered";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.btnDeletePoint_Click);
+            // 
             // btnOpenMap
             // 
+            this.btnOpenMap.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnOpenMap.ForeColor = System.Drawing.SystemColors.Control;
             this.btnOpenMap.Location = new System.Drawing.Point(44, 415);
             this.btnOpenMap.Name = "btnOpenMap";
             this.btnOpenMap.Size = new System.Drawing.Size(407, 53);
             this.btnOpenMap.TabIndex = 2;
             this.btnOpenMap.Text = "Open Map";
-            this.btnOpenMap.UseVisualStyleBackColor = true;
+            this.btnOpenMap.UseVisualStyleBackColor = false;
             this.btnOpenMap.Click += new System.EventHandler(this.btnOpenMap_Click);
             // 
             // btnStart
             // 
+            this.btnStart.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnStart.ForeColor = System.Drawing.SystemColors.Control;
             this.btnStart.Location = new System.Drawing.Point(44, 343);
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(407, 53);
             this.btnStart.TabIndex = 2;
             this.btnStart.Text = "Start";
-            this.btnStart.UseVisualStyleBackColor = true;
+            this.btnStart.UseVisualStyleBackColor = false;
             this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
             // 
             // btnAddPoint
             // 
+            this.btnAddPoint.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnAddPoint.ForeColor = System.Drawing.SystemColors.Control;
             this.btnAddPoint.Location = new System.Drawing.Point(41, 265);
             this.btnAddPoint.Name = "btnAddPoint";
             this.btnAddPoint.Size = new System.Drawing.Size(410, 53);
             this.btnAddPoint.TabIndex = 2;
             this.btnAddPoint.Text = "Add Point";
-            this.btnAddPoint.UseVisualStyleBackColor = true;
+            this.btnAddPoint.UseVisualStyleBackColor = false;
             this.btnAddPoint.Click += new System.EventHandler(this.btnAddPoint_Click);
             // 
             // btnLoadMap
             // 
+            this.btnLoadMap.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnLoadMap.ForeColor = System.Drawing.SystemColors.Control;
             this.btnLoadMap.Location = new System.Drawing.Point(41, 188);
             this.btnLoadMap.Name = "btnLoadMap";
             this.btnLoadMap.Size = new System.Drawing.Size(410, 53);
             this.btnLoadMap.TabIndex = 2;
             this.btnLoadMap.Text = "Load Into Map";
-            this.btnLoadMap.UseVisualStyleBackColor = true;
+            this.btnLoadMap.UseVisualStyleBackColor = false;
             this.btnLoadMap.Click += new System.EventHandler(this.btnLoadMap_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.SystemColors.Control;
             this.label2.Location = new System.Drawing.Point(37, 97);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(80, 20);
@@ -143,6 +165,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.SystemColors.Control;
             this.label1.Location = new System.Drawing.Point(37, 6);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(67, 20);
@@ -189,16 +212,6 @@
             this.map.TabIndex = 0;
             this.map.Zoom = 0D;
             this.map.MouseClick += new System.Windows.Forms.MouseEventHandler(this.map_MouseClick);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(44, 494);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(407, 53);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Delete Point";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.btnDeletePoint_Click);
             // 
             // HomePageForUser
             // 
